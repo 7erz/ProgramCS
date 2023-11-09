@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\leesn\\OneDrive\\바탕 화면\\SBS\\ProgramCS\\ProgramCS\\ProgramCS.csproj": {}
+    "C:\\Users\\leesn\\OneDrive\\바탕 화면\\SBS\\ProgramCS\\Second_Class\\Second_Class.csproj": {}
   },
   "projects": {
-    "C:\\Users\\leesn\\OneDrive\\바탕 화면\\SBS\\ProgramCS\\ProgramCS\\ProgramCS.csproj": {
+    "C:\\Users\\leesn\\OneDrive\\바탕 화면\\SBS\\ProgramCS\\Second_Class\\Second_Class.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\leesn\\OneDrive\\바탕 화면\\SBS\\ProgramCS\\ProgramCS\\ProgramCS.csproj",
-        "projectName": "ProgramCS",
-        "projectPath": "C:\\Users\\leesn\\OneDrive\\바탕 화면\\SBS\\ProgramCS\\ProgramCS\\ProgramCS.csproj",
+        "projectUniqueName": "C:\\Users\\leesn\\OneDrive\\바탕 화면\\SBS\\ProgramCS\\Second_Class\\Second_Class.csproj",
+        "projectName": "Second_Class",
+        "projectPath": "C:\\Users\\leesn\\OneDrive\\바탕 화면\\SBS\\ProgramCS\\Second_Class\\Second_Class.csproj",
         "packagesPath": "C:\\Users\\leesn\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\leesn\\OneDrive\\바탕 화면\\SBS\\ProgramCS\\ProgramCS\\obj\\",
+        "outputPath": "C:\\Users\\leesn\\OneDrive\\바탕 화면\\SBS\\ProgramCS\\Second_Class\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\leesn\\AppData\\Roaming\\NuGet\\NuGet.Config",
