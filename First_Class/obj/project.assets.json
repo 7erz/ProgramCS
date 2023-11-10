@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\leesn\\OneDrive\\바탕 화면\\SBS\\ProgramCS\\First_Class\\First_Class.csproj",
-      "projectName": "First_Class",
-      "projectPath": "C:\\Users\\leesn\\OneDrive\\바탕 화면\\SBS\\ProgramCS\\First_Class\\First_Class.csproj",
+      "projectUniqueName": "C:\\Users\\leesn\\OneDrive\\바탕 화면\\SBS\\ProgramCS\\First_Class\\Class_1st.csproj",
+      "projectName": "Class_1st",
+      "projectPath": "C:\\Users\\leesn\\OneDrive\\바탕 화면\\SBS\\ProgramCS\\First_Class\\Class_1st.csproj",
       "packagesPath": "C:\\Users\\leesn\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\leesn\\OneDrive\\바탕 화면\\SBS\\ProgramCS\\First_Class\\obj\\",
       "projectStyle": "PackageReference",

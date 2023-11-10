@@ -1,4 +1,5 @@
-﻿namespace First_Class
+﻿//<- {}↗ world namespace (global using glabal::System 등 기본으로 들어가있음)
+namespace Class_1st
 {
     #region C#기본
     //접근 지정자 class 이름

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\leesn\\OneDrive\\바탕 화면\\SBS\\ProgramCS\\Second_Class\\Class_2nd.csproj",
-      "projectName": "Class_2nd",
-      "projectPath": "C:\\Users\\leesn\\OneDrive\\바탕 화면\\SBS\\ProgramCS\\Second_Class\\Class_2nd.csproj",
+      "projectUniqueName": "C:\\Users\\leesn\\OneDrive\\바탕 화면\\SBS\\ProgramCS\\Class_3rd\\Class_3rd.csproj",
+      "projectName": "Class_3rd",
+      "projectPath": "C:\\Users\\leesn\\OneDrive\\바탕 화면\\SBS\\ProgramCS\\Class_3rd\\Class_3rd.csproj",
       "packagesPath": "C:\\Users\\leesn\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\leesn\\OneDrive\\바탕 화면\\SBS\\ProgramCS\\Second_Class\\obj\\",
+      "outputPath": "C:\\Users\\leesn\\OneDrive\\바탕 화면\\SBS\\ProgramCS\\Class_3rd\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\leesn\\AppData\\Roaming\\NuGet\\NuGet.Config",
