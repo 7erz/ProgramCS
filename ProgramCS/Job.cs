@@ -6,11 +6,15 @@ using System.Threading.Tasks;
 
 namespace ProgramCS
 {
-    internal class juggling : Unit
+    internal class Job
     {
-        public override void Skill()
+        protected int attack = 50;
+        protected int health = 0;
+
+        public Job(int health)
         {
-            Console.WriteLine("Burrow");
+            this.health = health;
         }
+        
     }
 }

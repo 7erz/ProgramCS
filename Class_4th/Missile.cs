@@ -1,4 +1,4 @@
-﻿namespace ProgramCS
+﻿namespace Class_4th
 {
     public class Missile : IItem
     {

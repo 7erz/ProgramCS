@@ -1,102 +1,67 @@
 ﻿namespace ProgramCS
 {
-    public class GameObject
-    {
-        private int guID;
-
-        public int GUID
-        {
-            set { guID = value; }
-            get { return guID; }
-        }
-
-        public GameObject Clone()       //깊은 복사
-        {
-            //1.class를 생성
-            GameObject gameObject = new GameObject();
-            //2.class안에 있는 데이터를 넣어줌
-            gameObject.guID = guID;
-            //3.class 반환
-            return gameObject;
-        }
-
-    }
-
-    public interface IItem
-    {
-        void Use();
-    }
-
-    public interface IWaitTime
-    {
-        void Wait(float timer);       //매개 변수 사용 가능
-    }
-
-    public class Player
-    {
-        public void OnTriggerEnter(IItem item)
-        {
-            item.Use();
-        }
-    }
+    public delegate void Calculator(int x, int y);
 
 
     internal class Program
     {
+        static void Add(int x, int y)
+        {
+            Console.WriteLine(x + " + " + y + " = " + (x + y));
+        }
+
+        static void Substract(int x, int y)
+        {
+            Console.WriteLine(x + " - " + y + " = " + (x - y));
+        }
+
+        static void Multiply(int x, int y)
+        {
+            Console.WriteLine(x + " * " + y + " = " + (x * y));
+        }
+
+        static void Divide(int x, int y)
+        {
+            Console.WriteLine(x + " / " + y + " = " + (x / y));
+        }
+        
         static void Main(string[] args)
         {
-            #region 얕은 복사
-            /*GameObject gameObject1 = new GameObject();
-            GameObject gameObject2 = gameObject1;
+            #region 델리게이트 (delegate)
+            //Calculator calculator;
+            //calculator = Add;
+            //calculator(5, 4);
 
-            gameObject2.GUID = 99;
-
-            Console.WriteLine("gameObject1.guID : " + gameObject1.GUID);
-            Console.WriteLine("gameObject2.guID : " + gameObject2.GUID);*/
+            //calculator = Substract;
+            //calculator(5, 4);
             #endregion
 
-            #region 깊은 복사
-            //GameObject clone1 = new GameObject();
+            #region 델리게이트 체인
+            //calculator = Add;
+            //calculator += Substract;
+            //calculator += Multiply;
+            //calculator += Divide;
 
-            //GameObject clone2 = clone1.Clone();
+            //calculator(5, 5);
 
-            //clone1.GUID= 1;
-            //clone2.GUID= 2;
+            //calculator -= Divide;
 
-            //Console.WriteLine("clone1.GUID : " + clone1.GUID);
-            //Console.WriteLine("clone2.GUID : " + clone2.GUID);
+            //calculator(5, 5);
             #endregion
 
-            #region 인터페이스
-            /*Player player = new Player();       //이런게 인스턴스
+            //SOH
+            //small of heap : 85kb 미만의 객체
 
-            //인터페이스는 참조 변수를 선언할 수 있지만 
-            //인스턴스를 생성할 수는 없음
-            IItem items;        //인스턴스가 아니라 인터페이스를 가리키는 참조 변수
+            //LOH
+            //large of heap : 85kb 이상의 객체
+            //힙을 안늘리는 선에서 작업해야 좋음
 
-            player.OnTriggerEnter(new Magnet());
-            player.OnTriggerEnter(new Missile());
-            player.OnTriggerEnter(new Shield());*/
-
-
-
-            #endregion
-
-            #region 추상 클래스
-            //abstract void Function();
-            //함수 변수 다 작성 가능함
-            //abstract는 자식에서 다 재정의 해야함
-            //예)
-            //속성:
-            //int data
-            //기능:
-            //abstract();   //참조변수로만 사용가능
-
-            juggling juggling = new juggling();
-            juggling.Skill();
-
+            #region base 키워드
+            Wizard wizard = new Wizard();
             #endregion
         }
+
     }
+
 }
 

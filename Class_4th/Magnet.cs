@@ -1,10 +1,10 @@
-﻿namespace ProgramCS
+﻿namespace Class_4th
 {
-    public class Shield : IItem, IWaitTime      //다중 상속이 되었음
+    public class Magnet : IItem, IWaitTime
     {
         public void Use()
         {
-            Console.WriteLine("Use Shield");
+            Console.WriteLine("Use Magnet");
         }
 
         public void Wait(float timer)
