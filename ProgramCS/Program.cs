@@ -1,63 +1,33 @@
-﻿namespace ProgramCS
+﻿using System.Security.Cryptography.X509Certificates;
+
+namespace ProgramCS
 {
-    public delegate void Calculator(int x, int y);
+    //SOLID
+    //단일 책임 원칙
 
 
     internal class Program
     {
-        static void Add(int x, int y)
-        {
-            Console.WriteLine(x + " + " + y + " = " + (x + y));
-        }
-
-        static void Substract(int x, int y)
-        {
-            Console.WriteLine(x + " - " + y + " = " + (x - y));
-        }
-
-        static void Multiply(int x, int y)
-        {
-            Console.WriteLine(x + " * " + y + " = " + (x * y));
-        }
-
-        static void Divide(int x, int y)
-        {
-            Console.WriteLine(x + " / " + y + " = " + (x / y));
-        }
         
         static void Main(string[] args)
         {
-            #region 델리게이트 (delegate)
-            //Calculator calculator;
-            //calculator = Add;
-            //calculator(5, 4);
+            #region SRP 5대 원칙 (단일 책임 원칙)
+            //Monster horangi = new Monster("Horangi", 30, 200);
+            //horangi.Patrol();
 
-            //calculator = Substract;
-            //calculator(5, 4);
+            //Inform monsterInfo= new Inform();
+            //monsterInfo.MonsterInfo(horangi);
             #endregion
 
-            #region 델리게이트 체인
-            //calculator = Add;
-            //calculator += Substract;
-            //calculator += Multiply;
-            //calculator += Divide;
+            #region OCP 5대 원칙
+            UnitManager unit = new UnitManager();
 
-            //calculator(5, 5);
+            Marine marine = new Marine();
+            Firebat firebat = new Firebat();
 
-            //calculator -= Divide;
+            unit.Command(marine);
+            unit.Command(firebat);
 
-            //calculator(5, 5);
-            #endregion
-
-            //SOH
-            //small of heap : 85kb 미만의 객체
-
-            //LOH
-            //large of heap : 85kb 이상의 객체
-            //힙을 안늘리는 선에서 작업해야 좋음
-
-            #region base 키워드
-            Wizard wizard = new Wizard();
             #endregion
         }
 
