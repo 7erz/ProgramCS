@@ -20,15 +20,53 @@ namespace ProgramCS
             #endregion
 
             #region OCP 5대 원칙
-            UnitManager unit = new UnitManager();
+            //UnitManager unit = new UnitManager();
 
-            Marine marine = new Marine();
-            Firebat firebat = new Firebat();
+            //Marine marine = new Marine();
+            //Firebat firebat = new Firebat();
 
-            unit.Command(marine);
-            unit.Command(firebat);
+            //unit.Command(marine);
+            //unit.Command(firebat);
 
             #endregion
+
+            #region ISP 5대 원칙
+            //Valkyrie valkyrie= new Valkyrie();
+            //BattleCruiser battleCruiser= new BattleCruiser();
+            //Wraith wraith= new Wraith();
+            //Dropship dropship= new Dropship();
+
+            //valkyrie.Attack();
+            //battleCruiser.Attack();
+            //wraith.Attack();
+            //Console.WriteLine();
+
+            //valkyrie.Move();
+            //battleCruiser.Move();
+            //wraith.Move();
+            //dropship.Move();
+            //Console.WriteLine();
+
+            //battleCruiser.Skill();
+            //wraith.Skill();
+            //dropship.Skill();
+
+
+            #endregion
+
+            #region DIP 5대 원칙
+            Player player = new Player(100, new Knife());
+            player.WeaponAct();
+
+            player.ChangeWeapon(new Rifle());
+            player.WeaponAct();
+
+            player.ChangeWeapon(new Granade());
+            player.WeaponAct();
+
+            #endregion
+
+
         }
 
     }
