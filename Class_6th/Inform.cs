@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace ProgramCS
+namespace Class_6th
 {
     public class Inform
     {
