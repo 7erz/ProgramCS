@@ -1,50 +1,150 @@
-﻿using System.Collections;
-using System.Security.Cryptography.X509Certificates;
-
-namespace ProgramCS
+﻿namespace ProgramCS
 {
     internal class Program
     {
+        static void Split(int[] array)
+        {
+            if (array.Length <= 1)
+                return;
+
+            int mid = array.Length / 2;
+            int[] leftArray = new int[mid];
+            int[] rightArray = new int[array.Length - mid];
+
+            Array.Copy(array, 0, leftArray, 0, mid);
+            Array.Copy(array, mid, rightArray, 0, array.Length - mid);
+
+            Split(leftArray);
+            Split(rightArray);
+            Sort(array, leftArray, rightArray);
+        }
+
+        //나의 답
+        static void Sort1(int[] array, int[] array1, int[] array2)
+        {
+
+            int[] sortArray = new int[array1.Length + array2.Length];
+            int left = 0;
+            int right = 0;
+            int counter = 0;
+
+            if (array1.Length == 1 && array2.Length == 1)
+            {
+                if (array1[0] > array2[0])
+                {
+                    sortArray[0] = array2[0];
+                    sortArray[1] = array1[0];
+                }
+                else
+                {
+                    sortArray[0] = array1[0];
+                    sortArray[1] = array2[0];
+                }
+            }
+            else
+            {
+                while (counter == sortArray.Length - 1)
+                {
+                    if (array1[left] > array2[right])
+                    {
+                        sortArray[counter] = array1[left];
+                        counter++;
+                        left++;
+                    }
+                    else
+                    {
+                        sortArray[counter] = array2[right];
+                        counter++;
+                        right++;
+                    }
+                }
+
+            }
+        }
+
+        static void Sort(int[] array, int[] leftArray, int[] rightArray)
+        {
+            int leftIndex = 0, rightIndex = 0, mergedIndex = 0;
+
+            while (leftIndex < leftArray.Length && rightIndex < rightArray.Length)
+            {
+                if (leftArray[leftIndex] <= rightArray[rightIndex])
+                {
+                    array[mergedIndex] = leftArray[leftIndex];
+                    leftIndex++;
+                }
+                else
+                {
+                    array[mergedIndex] = rightArray[rightIndex];
+                    rightIndex++;
+                }
+                mergedIndex++;
+            }
+
+            while (leftIndex < leftArray.Length)
+            {
+                array[mergedIndex] = leftArray[leftIndex];
+                leftIndex++;
+                mergedIndex++;
+            }
+
+            while (rightIndex < rightArray.Length)
+            {
+                array[mergedIndex] = rightArray[rightIndex];
+                rightIndex++;
+                mergedIndex++;
+            }
+        }
+
         static void Main(string[] args)
         {
-            #region 이진 트리
-            //오름차순으로 정렬된 리스트에서 특정한 값의 위치를 찾는 알고리즘
-            //시간 복잡도 : log(n)
+            #region 병합 정렬
+            //하나의 리스트를 두 개의 균등한 크기로 분할하고
+            //분할된 부분 리스트를 정렬한 다음, 두 개의 정렬된 부분
+            //리스트를 합하여 전체가 정렬된 리스트가 되게 하는 방법
 
+            //분할 : 입력 배열을 같은 크기의 2개의 부분 배열로 분할
+
+            //정복 : 부분 배열을 정렬하며, 부분 배열의 크기가 충분히 작지 않으면
+            //순환 호출을 이용하여 다시 분할 정복 실행
+
+            //결합 : 정렬된 부분 배열들을 하나의 배열에 병합
+
+            // 하는 법
             /*
-            //찾아야 하는 수 2
-            //[1][2][3][4][5][6]
-            // 0    ↑         5
-            //left = 0 right = 5
-            //0+5 후 나누기 = index값 
+            //[21][10][12][20][25][13][15][22]
+            //이 상태에서 반으로 쪼갬
+            //[21][10][12][20]   /   [25][13][15][22]
+            //[21][10]  /   [12][20]   /    [25][13]    /   [15][22]
+            //[21]    [10]    [12]    [20]    [25]    [13]    [15]    [22]
 
-            //[1][2][3]
-            // 0  ↑ 2
+            //값이 작다면 왼쪽에 넣어주기
+            //[10][21]  /   [12][20]    /   [13][25]    /   [15][22]
 
-            //3을 찾을때는 0은 없애고
-            //[1][2][3]
-            //    1  2
-
-            //비교는 인덱스로 찾는건 수로
-            //크면 left 작으면 right를 갱신
+            //4개짜리 배열은 LEFT([*10][21]) RIGHT([*12][20]) 을 비교
+            //*표시중 제일 작은 것을 0번째 배열에 넣음
+            //그후 LEFT를 1로 옮김[21]
+            //[*12]가 작기에 1에 [12]를 넣음
+            //그후 [21],[20]을 비교해서 2의 자리에 [20]을 넣음
+            //나머지를 3의 배열에 넣기
+            //8개 짜리도 똑같이 하면됨
             */
 
-            
+
+            int[] array = new int[8] { 21,10,12,20,25,13,15,22};    
+            Split(array);
+
+            foreach (int i in array)
+            {
+                Console.Write(i + " ");
+            }
 
 
-            //1. 배열의 가운데 요소에 인덱스 pivot으로 설정
-
-            //2. [pivot]의 값이 찾고자 하는 요소가 같다면 검색 완료
-
-            //3. [pivot]의 값이 찾는 값보다 크다면 left~pivot 사이 검색
-
-            //4. [pivot]의 값이 찾는 값보다 작다면 pivot~right 사이 검색
 
 
 
 
             #endregion
-
         }
 
     }
