@@ -34,6 +34,44 @@
             #endregion
 
             #region 인접 행렬
+            /*AdjacencyMatrix<char> adjacencyMatrix = new AdjacencyMatrix<char>(4);
+
+            adjacencyMatrix.InsertVertex('A');
+            adjacencyMatrix.InsertVertex('B');
+            adjacencyMatrix.InsertVertex('C');
+            adjacencyMatrix.InsertVertex('D');
+
+
+            adjacencyMatrix.InsertEdge(0, 1);
+            adjacencyMatrix.InsertEdge(0, 2);
+            adjacencyMatrix.InsertEdge(0, 3);
+            adjacencyMatrix.InsertEdge(1, 2);
+            adjacencyMatrix.InsertEdge(2, 3);
+
+            adjacencyMatrix.Display();*/
+
+            #endregion
+
+            #region 인접 리스트
+            AdjacencyList<char> adjacencyList = new AdjacencyList<char>(5);
+
+            adjacencyList.AddVertex('A');
+            adjacencyList.AddVertex('B');
+            adjacencyList.AddVertex('C');
+            adjacencyList.AddVertex('D');
+            adjacencyList.AddVertex('E');
+
+            adjacencyList.AddList(0, 'B');
+            adjacencyList.AddList(1, 'A');
+            adjacencyList.AddList(1, 'C');
+            adjacencyList.AddList(2, 'B');
+            adjacencyList.AddList(2, 'D');
+            adjacencyList.AddList(3, 'C');
+            adjacencyList.AddList(3, 'E');
+            adjacencyList.AddList(4, 'E');
+
+            adjacencyList.Display();
+
 
             #endregion
         }
