@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProgramCS
+namespace Class_5th
 {
     internal class Resolution
     {
-        const int width = 1440;     
+        const int width = 1440;
         //런타임 상수는 생성자에서 단 한번 초기화를 할 수 있음
         readonly int height;        //데이터영역
 

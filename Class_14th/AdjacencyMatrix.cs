@@ -5,7 +5,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProgramCS
+namespace Class_14th
 {
     internal class AdjacencyMatrix<T>
     {

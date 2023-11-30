@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProgramCS
+namespace Class_5th
 {
     internal class Wizard : Job
     {
